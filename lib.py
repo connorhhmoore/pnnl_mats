@@ -2174,6 +2174,1812 @@ def get_pnnl_mats(xs_lib: str = "endfb81") -> dict[int, openmc.Material]:
     mat.add_element("C", 0.841164, "wo")
     mat_list.append(mat)
 
+
+    # --- PNNL 151: Germanium, High Purity ---
+    mat = openmc.Material(material_id=151, name="Germanium, High Purity")
+    mat.set_density("g/cc", 5.323)
+    mat.add_nuclide("Ge70", 0.198037, "wo")
+    mat.add_nuclide("Ge72", 0.271824, "wo")
+    mat.add_nuclide("Ge73", 0.077813, "wo")
+    mat.add_nuclide("Ge74", 0.371489, "wo")
+    mat.add_nuclide("Ge76", 0.080803, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 152: Glass Scintillator, Li Doped (GS1, GS2, GS3) ---
+    mat = openmc.Material(material_id=152, name="Glass Scintillator, Li Doped (GS1, GS2, GS3)")
+    mat.set_density("g/cc", 2.66)
+    mat.add_nuclide("Li6", 0.001826, "wo")
+    mat.add_nuclide("Li7", 0.025938, "wo")
+    mat.add_nuclide("O16", 0.476645, "wo")
+    mat.add_nuclide("O17", 0.000193, "wo")
+    mat.add_nuclide("O18", 0.001102, "wo")
+    mat.add_element("Mg", 0.144729, "wo")
+    mat.add_nuclide("Al27", 0.058217, "wo")
+    mat.add_element("Si", 0.257089, "wo")
+    mat.add_nuclide("Ce136", 0.000061, "wo")
+    mat.add_nuclide("Ce138", 0.000084, "wo")
+    mat.add_nuclide("Ce140", 0.030161, "wo")
+    mat.add_nuclide("Ce142", 0.003844, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 153: Glass Scintillator, Li Doped (GS10, GS20, GS30) ---
+    mat = openmc.Material(material_id=153, name="Glass Scintillator, Li Doped (GS10, GS20, GS30)")
+    mat.set_density("g/cc", 2.5)
+    mat.add_nuclide("Li6", 0.005479, "wo")
+    mat.add_nuclide("Li7", 0.077814, "wo")
+    mat.add_nuclide("O16", 0.499719, "wo")
+    mat.add_nuclide("O17", 0.000202, "wo")
+    mat.add_nuclide("O18", 0.001156, "wo")
+    mat.add_element("Mg", 0.024121, "wo")
+    mat.add_nuclide("Al27", 0.095264, "wo")
+    mat.add_element("Si", 0.261764, "wo")
+    mat.add_nuclide("Ce136", 0.000061, "wo")
+    mat.add_nuclide("Ce138", 0.000084, "wo")
+    mat.add_nuclide("Ce140", 0.030161, "wo")
+    mat.add_nuclide("Ce142", 0.003844, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 154: Glass Scintillator, Li Doped (GSF1, GSF2, and GSF3) ---
+    mat = openmc.Material(material_id=154, name="Glass Scintillator, Li Doped (GSF1, GSF2, and GSF3)")
+    mat.set_density("g/cc", 2.42)
+    mat.add_nuclide("Li6", 0.003050, "wo")
+    mat.add_nuclide("Li7", 0.043316, "wo")
+    mat.add_nuclide("O16", 0.504444, "wo")
+    mat.add_nuclide("O17", 0.000204, "wo")
+    mat.add_nuclide("O18", 0.001167, "wo")
+    mat.add_nuclide("Na23", 0.017840, "wo")
+    mat.add_nuclide("Al27", 0.095455, "wo")
+    mat.add_element("Si", 0.313809, "wo")
+    mat.add_nuclide("Ce136", 0.000037, "wo")
+    mat.add_nuclide("Ce138", 0.000051, "wo")
+    mat.add_nuclide("Ce140", 0.018132, "wo")
+    mat.add_nuclide("Ce142", 0.002311, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 155: Glass Scintillator, Li Doped (KG1, KG2, KG3) ---
+    mat = openmc.Material(material_id=155, name="Glass Scintillator, Li Doped (KG1, KG2, KG3)")
+    mat.set_density("g/cc", 2.42)
+    mat.add_nuclide("Li6", 0.006393, "wo")
+    mat.add_nuclide("Li7", 0.090783, "wo")
+    mat.add_nuclide("O16", 0.512458, "wo")
+    mat.add_nuclide("O17", 0.000207, "wo")
+    mat.add_nuclide("O18", 0.001185, "wo")
+    mat.add_element("Si", 0.345902, "wo")
+    mat.add_nuclide("Ce136", 0.000077, "wo")
+    mat.add_nuclide("Ce138", 0.000105, "wo")
+    mat.add_nuclide("Ce140", 0.037701, "wo")
+    mat.add_nuclide("Ce142", 0.004805, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 156: Glass, Borosilicate (Pyrex Glass) ---
+    mat = openmc.Material(material_id=156, name="Glass, Borosilicate (Pyrex Glass)")
+    mat.set_density("g/cc", 2.23)
+    mat.add_nuclide("B10", 0.007382, "wo")
+    mat.add_nuclide("B11", 0.032672, "wo")
+    mat.add_nuclide("O16", 0.538099, "wo")
+    mat.add_nuclide("O17", 0.000218, "wo")
+    mat.add_nuclide("O18", 0.001244, "wo")
+    mat.add_nuclide("Na23", 0.028191, "wo")
+    mat.add_nuclide("Al27", 0.011644, "wo")
+    mat.add_element("Si", 0.377219, "wo")
+    mat.add_element("K", 0.003321, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 157: Glass, Foam ---
+    mat = openmc.Material(material_id=157, name="Glass, Foam")
+    mat.set_density("g/cc", 0.128)
+    mat.add_nuclide("H1", 0.001000, "wo")
+    mat.add_nuclide("H2", 0.000000, "wo")
+    mat.add_nuclide("B10", 0.002764, "wo")
+    mat.add_nuclide("B11", 0.012233, "wo")
+    mat.add_nuclide("O16", 0.532553, "wo")
+    mat.add_nuclide("O17", 0.000216, "wo")
+    mat.add_nuclide("O18", 0.001232, "wo")
+    mat.add_nuclide("Na23", 0.161000, "wo")
+    mat.add_element("Si", 0.279000, "wo")
+    mat.add_element("S", 0.010000, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 158: Glass, Lead ---
+    mat = openmc.Material(material_id=158, name="Glass, Lead")
+    mat.set_density("g/cc", 6.22)
+    mat.add_nuclide("O16", 0.156029, "wo")
+    mat.add_nuclide("O17", 0.000063, "wo")
+    mat.add_nuclide("O18", 0.000361, "wo")
+    mat.add_element("Si", 0.080866, "wo")
+    mat.add_element("Ti", 0.008092, "wo")
+    mat.add_nuclide("As75", 0.002651, "wo")
+    mat.add_element("Pb", 0.751938, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 159: Glass, Plate ---
+    mat = openmc.Material(material_id=159, name="Glass, Plate")
+    mat.set_density("g/cc", 2.4)
+    mat.add_nuclide("O16", 0.458555, "wo")
+    mat.add_nuclide("O17", 0.000186, "wo")
+    mat.add_nuclide("O18", 0.001060, "wo")
+    mat.add_nuclide("Na23", 0.096441, "wo")
+    mat.add_element("Si", 0.336553, "wo")
+    mat.add_element("Ca", 0.107205, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 160: Glycerol ---
+    mat = openmc.Material(material_id=160, name="Glycerol")
+    mat.set_density("g/cc", 1.2613)
+    mat.add_nuclide("H1", 0.087538, "wo")
+    mat.add_nuclide("H2", 0.000020, "wo")
+    mat.add_element("C", 0.391251, "wo")
+    mat.add_nuclide("O16", 0.519776, "wo")
+    mat.add_nuclide("O17", 0.000210, "wo")
+    mat.add_nuclide("O18", 0.001202, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 161: Gold ---
+    mat = openmc.Material(material_id=161, name="Gold")
+    mat.set_density("g/cc", 19.32)
+    mat.add_nuclide("Au197", 1.000000, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 162: Gypsum (Plaster of Paris) ---
+    mat = openmc.Material(material_id=162, name="Gypsum (Plaster of Paris)")
+    mat.set_density("g/cc", 2.32)
+    mat.add_nuclide("H1", 0.023411, "wo")
+    mat.add_nuclide("H2", 0.000005, "wo")
+    mat.add_nuclide("O16", 0.556044, "wo")
+    mat.add_nuclide("O17", 0.000225, "wo")
+    mat.add_nuclide("O18", 0.001286, "wo")
+    mat.add_element("S", 0.186251, "wo")
+    mat.add_element("Ca", 0.232776, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 163: He-3 Proportional Gas ---
+    mat = openmc.Material(material_id=163, name="He-3 Proportional Gas")
+    mat.set_density("g/cc", 2.500E-03)
+    mat.add_nuclide("He3", 1.000000, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 164: He-4 Gas Detector ---
+    mat = openmc.Material(material_id=164, name="He-4 Gas Detector")
+    mat.set_density("g/cc", 0.03)
+    mat.add_nuclide("He4", 1.000000, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 165: Helium, Natural ---
+    mat = openmc.Material(material_id=165, name="Helium, Natural")
+    mat.set_density("g/cc", 0.000166322)
+    mat.add_nuclide("He3", 0.000001, "wo")
+    mat.add_nuclide("He4", 0.999999, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 166: Hydrogen ---
+    mat = openmc.Material(material_id=166, name="Hydrogen")
+    mat.set_density("g/cc", 8.3748E-05)
+    mat.add_nuclide("H1", 0.999736, "wo")
+    mat.add_nuclide("H2", 0.000230, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 167: Incoloy Alloy 800 ---
+    mat = openmc.Material(material_id=167, name="Incoloy Alloy 800")
+    mat.set_density("g/cc", 7.94)
+    mat.add_element("C", 0.000650, "wo")
+    mat.add_nuclide("Al27", 0.003750, "wo")
+    mat.add_element("Si", 0.006500, "wo")
+    mat.add_element("S", 0.000097, "wo")
+    mat.add_element("Ti", 0.003750, "wo")
+    mat.add_element("Cr", 0.210000, "wo")
+    mat.add_nuclide("Mn55", 0.009750, "wo")
+    mat.add_element("Fe", 0.435628, "wo")
+    mat.add_element("Ni", 0.325000, "wo")
+    mat.add_element("Cu", 0.004875, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 168: Inconel Alloy 600 ---
+    mat = openmc.Material(material_id=168, name="Inconel Alloy 600")
+    mat.set_density("g/cc", 8.47)
+    mat.add_element("C", 0.000975, "wo")
+    mat.add_element("Si", 0.003250, "wo")
+    mat.add_element("S", 0.000097, "wo")
+    mat.add_element("Cr", 0.155000, "wo")
+    mat.add_nuclide("Mn55", 0.006500, "wo")
+    mat.add_element("Fe", 0.080000, "wo")
+    mat.add_element("Ni", 0.750928, "wo")
+    mat.add_element("Cu", 0.003250, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 169: Inconel Alloy 625 ---
+    mat = openmc.Material(material_id=169, name="Inconel Alloy 625")
+    mat.set_density("g/cc", 8.44)
+    mat.add_element("C", 0.000990, "wo")
+    mat.add_nuclide("Al27", 0.003960, "wo")
+    mat.add_element("Si", 0.004950, "wo")
+    mat.add_nuclide("P31", 0.000148, "wo")
+    mat.add_element("S", 0.000148, "wo")
+    mat.add_element("Ti", 0.003960, "wo")
+    mat.add_element("Cr", 0.215000, "wo")
+    mat.add_nuclide("Mn55", 0.004950, "wo")
+    mat.add_element("Fe", 0.049495, "wo")
+    mat.add_nuclide("Co59", 0.009899, "wo")
+    mat.add_element("Ni", 0.580000, "wo")
+    mat.add_nuclide("Nb93", 0.036500, "wo")
+    mat.add_element("Mo", 0.090000, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 170: Inconel Alloy 718 ---
+    mat = openmc.Material(material_id=170, name="Inconel Alloy 718")
+    mat.set_density("g/cc", 8.19)
+    mat.add_nuclide("B10", 0.000010, "wo")
+    mat.add_nuclide("B11", 0.000045, "wo")
+    mat.add_element("C", 0.000728, "wo")
+    mat.add_nuclide("Al27", 0.005000, "wo")
+    mat.add_element("Si", 0.003184, "wo")
+    mat.add_nuclide("P31", 0.000136, "wo")
+    mat.add_element("S", 0.000136, "wo")
+    mat.add_element("Ti", 0.009000, "wo")
+    mat.add_element("Cr", 0.190000, "wo")
+    mat.add_nuclide("Mn55", 0.003184, "wo")
+    mat.add_element("Fe", 0.170000, "wo")
+    mat.add_element("Ni", 0.525000, "wo")
+    mat.add_nuclide("Co59", 0.009098, "wo")
+    mat.add_element("Cu", 0.002729, "wo")
+    mat.add_nuclide("Nb93", 0.051250, "wo")
+    mat.add_element("Mo", 0.030500, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 171: Indium ---
+    mat = openmc.Material(material_id=171, name="Indium")
+    mat.set_density("g/cc", 7.31)
+    mat.add_element("In", 1.000000, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 172: Iron ---
+    mat = openmc.Material(material_id=172, name="Iron")
+    mat.set_density("g/cc", 7.874)
+    mat.add_element("Fe", 1.000000, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 173: Iron Boride (Fe2B) ---
+    mat = openmc.Material(material_id=173, name="Iron Boride (Fe2B)")
+    mat.set_density("g/cc", 7.3)
+    mat.add_nuclide("B10", 0.051440, "wo")
+    mat.add_nuclide("B11", 0.227655, "wo")
+    mat.add_element("Fe", 0.720841, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 174: Iron Boride (FeB) ---
+    mat = openmc.Material(material_id=174, name="Iron Boride (FeB)")
+    mat.set_density("g/cc", 7.15)
+    mat.add_nuclide("B10", 0.029892, "wo")
+    mat.add_nuclide("B11", 0.132293, "wo")
+    mat.add_element("Fe", 0.837778, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 175: Iron, Armco Ingot ---
+    mat = openmc.Material(material_id=175, name="Iron, Armco Ingot")
+    mat.set_density("g/cc", 7.866)
+    mat.add_element("C", 0.000120, "wo")
+    mat.add_nuclide("O16", 0.001097, "wo")
+    mat.add_nuclide("O17", 0.000000, "wo")
+    mat.add_nuclide("O18", 0.000003, "wo")
+    mat.add_nuclide("P31", 0.000050, "wo")
+    mat.add_element("S", 0.000250, "wo")
+    mat.add_nuclide("Mn55", 0.000170, "wo")
+    mat.add_element("Fe", 0.998310, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 176: Iron, Cast (gray) ---
+    mat = openmc.Material(material_id=176, name="Iron, Cast (gray)")
+    mat.set_density("g/cc", 7.15)
+    mat.add_element("C", 0.034000, "wo")
+    mat.add_element("Si", 0.026000, "wo")
+    mat.add_nuclide("P31", 0.003000, "wo")
+    mat.add_element("S", 0.001000, "wo")
+    mat.add_nuclide("Mn55", 0.006500, "wo")
+    mat.add_element("Fe", 0.929500, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 177: Iron, Wrought (Byers No.1) ---
+    mat = openmc.Material(material_id=177, name="Iron, Wrought (Byers No.1)")
+    mat.set_density("g/cc", 7.7)
+    mat.add_element("C", 0.000810, "wo")
+    mat.add_element("Si", 0.001599, "wo")
+    mat.add_nuclide("P31", 0.000628, "wo")
+    mat.add_element("S", 0.000101, "wo")
+    mat.add_nuclide("Mn55", 0.000152, "wo")
+    mat.add_element("Fe", 0.996710, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 178: Kaowool ---
+    mat = openmc.Material(material_id=178, name="Kaowool")
+    mat.set_density("g/cc", 0.096)
+    mat.add_nuclide("B10", 0.000046, "wo")
+    mat.add_nuclide("B11", 0.000202, "wo")
+    mat.add_nuclide("O16", 0.498709, "wo")
+    mat.add_nuclide("O17", 0.000202, "wo")
+    mat.add_nuclide("O18", 0.001153, "wo")
+    mat.add_nuclide("Al27", 0.238163, "wo")
+    mat.add_element("Si", 0.243627, "wo")
+    mat.add_element("Ca", 0.000715, "wo")
+    mat.add_element("Ti", 0.010189, "wo")
+    mat.add_element("Fe", 0.006994, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 179: Kapton Polyimide Film ---
+    mat = openmc.Material(material_id=179, name="Kapton Polyimide Film")
+    mat.set_density("g/cc", 1.42)
+    mat.add_nuclide("H1", 0.026355, "wo")
+    mat.add_nuclide("H2", 0.000006, "wo")
+    mat.add_element("C", 0.691133, "wo")
+    mat.add_nuclide("N14", 0.072984, "wo")
+    mat.add_nuclide("N15", 0.000286, "wo")
+    mat.add_nuclide("O16", 0.208668, "wo")
+    mat.add_nuclide("O17", 0.000084, "wo")
+    mat.add_nuclide("O18", 0.000483, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 180: Kennertium ---
+    mat = openmc.Material(material_id=180, name="Kennertium")
+    mat.set_density("g/cc", 16.8)
+    mat.add_element("Ni", 0.090000, "wo")
+    mat.add_element("Cu", 0.150000, "wo")
+    mat.add_element("W", 0.760000, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 181: Kernite ---
+    mat = openmc.Material(material_id=181, name="Kernite")
+    mat.set_density("g/cc", 1.95)
+    mat.add_nuclide("H1", 0.029499, "wo")
+    mat.add_nuclide("H2", 0.000007, "wo")
+    mat.add_nuclide("B10", 0.029164, "wo")
+    mat.add_nuclide("B11", 0.129071, "wo")
+    mat.add_nuclide("O16", 0.642234, "wo")
+    mat.add_nuclide("O17", 0.000260, "wo")
+    mat.add_nuclide("O18", 0.001485, "wo")
+    mat.add_nuclide("Na23", 0.168244, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 182: Kerosene ---
+    mat = openmc.Material(material_id=182, name="Kerosene")
+    mat.set_density("g/cc", 0.819)
+    mat.add_nuclide("H1", 0.152385, "wo")
+    mat.add_nuclide("H2", 0.000035, "wo")
+    mat.add_element("C", 0.847575, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 183: Krypton ---
+    mat = openmc.Material(material_id=183, name="Krypton")
+    mat.set_density("g/cc", 0.00347832)
+    mat.add_nuclide("Kr78", 0.003301, "wo")
+    mat.add_nuclide("Kr80", 0.021801, "wo")
+    mat.add_nuclide("Kr82", 0.113323, "wo")
+    mat.add_nuclide("Kr83", 0.113787, "wo")
+    mat.add_nuclide("Kr84", 0.570642, "wo")
+    mat.add_nuclide("Kr86", 0.177146, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 184: Kynar ---
+    mat = openmc.Material(material_id=184, name="Kynar")
+    mat.set_density("g/cc", 1.79)
+    mat.add_nuclide("H1", 0.031474, "wo")
+    mat.add_nuclide("H2", 0.000007, "wo")
+    mat.add_element("C", 0.375132, "wo")
+    mat.add_nuclide("F19", 0.593385, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 185: Lanthanum Bromide - 0.5 wt% Cerium doped ---
+    mat = openmc.Material(material_id=185, name="Lanthanum Bromide - 0.5 wt% Cerium doped")
+    mat.set_density("g/cc", 5.08)
+    mat.add_nuclide("Br79", 0.320699, "wo")
+    mat.add_nuclide("Br81", 0.319866, "wo")
+    mat.add_nuclide("Ce136", 0.000003, "wo")
+    mat.add_nuclide("Ce138", 0.000005, "wo")
+    mat.add_nuclide("Ce140", 0.001639, "wo")
+    mat.add_nuclide("Ce142", 0.000209, "wo")
+    mat.add_nuclide("La138", 0.000315, "wo")
+    mat.add_nuclide("La139", 0.357260, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 186: Lanthanum Bromide - 10 wt% Cerium and 0.10 wt% Strontium doped ---
+    mat = openmc.Material(material_id=186, name="Lanthanum Bromide - 10 wt% Cerium and 0.10 wt% Strontium doped")
+    mat.set_density("g/cc", 5.08)
+    mat.add_nuclide("Br79", 0.316914, "wo")
+    mat.add_nuclide("Br81", 0.316091, "wo")
+    mat.add_nuclide("Ce136", 0.000066, "wo")
+    mat.add_nuclide("Ce138", 0.000091, "wo")
+    mat.add_nuclide("Ce140", 0.032677, "wo")
+    mat.add_nuclide("Ce142", 0.004165, "wo")
+    mat.add_nuclide("La138", 0.000291, "wo")
+    mat.add_nuclide("La139", 0.329470, "wo")
+    mat.add_nuclide("Sr84", 0.000001, "wo")
+    mat.add_nuclide("Sr86", 0.000022, "wo")
+    mat.add_nuclide("Sr87", 0.000016, "wo")
+    mat.add_nuclide("Sr88", 0.000191, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 187: Lanthanum Bromide - 10 wt% Cerium doped ---
+    mat = openmc.Material(material_id=187, name="Lanthanum Bromide - 10 wt% Cerium doped")
+    mat.set_density("g/cc", 5.08)
+    mat.add_nuclide("Br79", 0.316063, "wo")
+    mat.add_nuclide("Br81", 0.315242, "wo")
+    mat.add_nuclide("Ce136", 0.000066, "wo")
+    mat.add_nuclide("Ce138", 0.000090, "wo")
+    mat.add_nuclide("Ce140", 0.032308, "wo")
+    mat.add_nuclide("Ce142", 0.004118, "wo")
+    mat.add_nuclide("La138", 0.000293, "wo")
+    mat.add_nuclide("La139", 0.331817, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 188: Lanthanum Bromide - 5 wt% Cerium doped ---
+    mat = openmc.Material(material_id=188, name="Lanthanum Bromide - 5 wt% Cerium doped")
+    mat.set_density("g/cc", 5.08)
+    mat.add_nuclide("Br79", 0.316012, "wo")
+    mat.add_nuclide("Br81", 0.315192, "wo")
+    mat.add_nuclide("Ce136", 0.000033, "wo")
+    mat.add_nuclide("Ce138", 0.000045, "wo")
+    mat.add_nuclide("Ce140", 0.016151, "wo")
+    mat.add_nuclide("Ce142", 0.002059, "wo")
+    mat.add_nuclide("La138", 0.000309, "wo")
+    mat.add_nuclide("La139", 0.350195, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 189: Lead ---
+    mat = openmc.Material(material_id=189, name="Lead")
+    mat.set_density("g/cc", 11.35)
+    mat.add_element("Pb", 1.000000, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 190: Lead Iodide ---
+    mat = openmc.Material(material_id=190, name="Lead Iodide")
+    mat.set_density("g/cc", 6.16)
+    mat.add_element("Pb", 0.449449, "wo")
+    mat.add_nuclide("I127", 0.550551, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 191: Lead Tungstate (PWO) ---
+    mat = openmc.Material(material_id=191, name="Lead Tungstate (PWO)")
+    mat.set_density("g/cc", 8.24)
+    mat.add_nuclide("O16", 0.140261, "wo")
+    mat.add_nuclide("O17", 0.000057, "wo")
+    mat.add_nuclide("O18", 0.000324, "wo")
+    mat.add_element("W", 0.404011, "wo")
+    mat.add_element("Pb", 0.455347, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 192: Lithium ---
+    mat = openmc.Material(material_id=192, name="Lithium")
+    mat.set_density("g/cc", 0.534)
+    mat.add_nuclide("Li6", 0.065525, "wo")
+    mat.add_nuclide("Li7", 0.930533, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 193: Lithium Amide ---
+    mat = openmc.Material(material_id=193, name="Lithium Amide")
+    mat.set_density("g/cc", 1.178)
+    mat.add_nuclide("H1", 0.087664, "wo")
+    mat.add_nuclide("H2", 0.000020, "wo")
+    mat.add_nuclide("Li6", 0.019858, "wo")
+    mat.add_nuclide("Li7", 0.282010, "wo")
+    mat.add_nuclide("N14", 0.606868, "wo")
+    mat.add_nuclide("N15", 0.002375, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 194: Lithium Fluoride ---
+    mat = openmc.Material(material_id=194, name="Lithium Fluoride")
+    mat.set_density("g/cc", 2.635)
+    mat.add_nuclide("Li6", 0.017583, "wo")
+    mat.add_nuclide("Li7", 0.249692, "wo")
+    mat.add_nuclide("F19", 0.731667, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 195: Lithium Gadolinium Borate (LGB) ---
+    mat = openmc.Material(material_id=195, name="Lithium Gadolinium Borate (LGB)")
+    mat.set_density("g/cc", 3.5)
+    mat.add_nuclide("Li6", 0.098240, "wo")
+    mat.add_nuclide("B10", 0.081766, "wo")
+    mat.add_nuclide("O16", 0.390894, "wo")
+    mat.add_nuclide("O17", 0.000158, "wo")
+    mat.add_nuclide("O18", 0.000904, "wo")
+    mat.add_element("Gd", 0.428038, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 196: Lithium Hydride ---
+    mat = openmc.Material(material_id=196, name="Lithium Hydride")
+    mat.set_density("g/cc", 0.82)
+    mat.add_nuclide("H1", 0.126351, "wo")
+    mat.add_nuclide("H2", 0.000029, "wo")
+    mat.add_nuclide("Li6", 0.057244, "wo")
+    mat.add_nuclide("Li7", 0.812928, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 197: Lithium Iodide (high density) ---
+    mat = openmc.Material(material_id=197, name="Lithium Iodide (high density)")
+    mat.set_density("g/cc", 4.08)
+    mat.add_nuclide("Li6", 0.003410, "wo")
+    mat.add_nuclide("Li7", 0.048431, "wo")
+    mat.add_nuclide("I127", 0.947954, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 198: Lithium Iodide (low density) ---
+    mat = openmc.Material(material_id=198, name="Lithium Iodide (low density)")
+    mat.set_density("g/cc", 3.494)
+    mat.add_nuclide("Li6", 0.003410, "wo")
+    mat.add_nuclide("Li7", 0.048431, "wo")
+    mat.add_nuclide("I127", 0.947954, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 199: Lithium Oxide ---
+    mat = openmc.Material(material_id=199, name="Lithium Oxide")
+    mat.set_density("g/cc", 2.013)
+    mat.add_nuclide("Li6", 0.030503, "wo")
+    mat.add_nuclide("Li7", 0.433180, "wo")
+    mat.add_nuclide("O16", 0.533034, "wo")
+    mat.add_nuclide("O17", 0.000216, "wo")
+    mat.add_nuclide("O18", 0.001233, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 200: Lithium Tetraborate ---
+    mat = openmc.Material(material_id=200, name="Lithium Tetraborate")
+    mat.set_density("g/cc", 2.44)
+    mat.add_nuclide("Li6", 0.005397, "wo")
+    mat.add_nuclide("Li7", 0.076644, "wo")
+    mat.add_nuclide("B10", 0.047110, "wo")
+    mat.add_nuclide("B11", 0.208493, "wo")
+    mat.add_nuclide("O16", 0.660179, "wo")
+    mat.add_nuclide("O17", 0.000267, "wo")
+    mat.add_nuclide("O18", 0.001527, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 201: Lucite ---
+    mat = openmc.Material(material_id=201, name="Lucite")
+    mat.set_density("g/cc", 1.19)
+    mat.add_nuclide("H1", 0.080524, "wo")
+    mat.add_nuclide("H2", 0.000019, "wo")
+    mat.add_element("C", 0.599836, "wo")
+    mat.add_nuclide("O16", 0.318752, "wo")
+    mat.add_nuclide("O17", 0.000129, "wo")
+    mat.add_nuclide("O18", 0.000737, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 202: Lutetium Aluminum Garnet (LuAG) ---
+    mat = openmc.Material(material_id=202, name="Lutetium Aluminum Garnet (LuAG)")
+    mat.set_density("g/cc", 6.73)
+    mat.add_nuclide("O16", 0.224786, "wo")
+    mat.add_nuclide("O17", 0.000091, "wo")
+    mat.add_nuclide("O18", 0.000520, "wo")
+    mat.add_nuclide("Al27", 0.158379, "wo")
+    mat.add_nuclide("Lu175", 0.600120, "wo")
+    mat.add_nuclide("Lu176", 0.016105, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 203: Lutetium Iodide ---
+    mat = openmc.Material(material_id=203, name="Lutetium Iodide")
+    mat.set_density("g/cc", 5.6)
+    mat.add_nuclide("Lu175", 0.306641, "wo")
+    mat.add_nuclide("Lu176", 0.008229, "wo")
+    mat.add_nuclide("I127", 0.685130, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 204: Lutetium Orthoaluminate (LuAP) ---
+    mat = openmc.Material(material_id=204, name="Lutetium Orthoaluminate (LuAP)")
+    mat.set_density("g/cc", 8.4)
+    mat.add_nuclide("O16", 0.191514, "wo")
+    mat.add_nuclide("O17", 0.000078, "wo")
+    mat.add_nuclide("O18", 0.000443, "wo")
+    mat.add_nuclide("Al27", 0.107949, "wo")
+    mat.add_nuclide("Lu175", 0.681722, "wo")
+    mat.add_nuclide("Lu176", 0.018295, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 205: Lutetium Oxyorthosilicate (LSO) ---
+    mat = openmc.Material(material_id=205, name="Lutetium Oxyorthosilicate (LSO)")
+    mat.set_density("g/cc", 7.4)
+    mat.add_nuclide("O16", 0.174187, "wo")
+    mat.add_nuclide("O17", 0.000071, "wo")
+    mat.add_nuclide("O18", 0.000403, "wo")
+    mat.add_element("Si", 0.061319, "wo")
+    mat.add_nuclide("Lu175", 0.744054, "wo")
+    mat.add_nuclide("Lu176", 0.019968, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 206: Lutetium Yttrium OxyorthoSilicate: 0.5 atom% Cerium (LYSO) ---
+    mat = openmc.Material(material_id=206, name="Lutetium Yttrium OxyorthoSilicate: 0.5 atom% Cerium (LYSO)")
+    mat.set_density("g/cc", 7.25)
+    mat.add_nuclide("O16", 0.175325, "wo")
+    mat.add_nuclide("O17", 0.000071, "wo")
+    mat.add_nuclide("O18", 0.000405, "wo")
+    mat.add_element("Si", 0.061720, "wo")
+    mat.add_nuclide("Y89", 0.019538, "wo")
+    mat.add_nuclide("Lu175", 0.711469, "wo")
+    mat.add_nuclide("Lu176", 0.019093, "wo")
+    mat.add_nuclide("Ce136", 0.000022, "wo")
+    mat.add_nuclide("Ce138", 0.000031, "wo")
+    mat.add_nuclide("Ce140", 0.010932, "wo")
+    mat.add_nuclide("Ce142", 0.001393, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 207: Magnesium ---
+    mat = openmc.Material(material_id=207, name="Magnesium")
+    mat.set_density("g/cc", 1.74)
+    mat.add_element("Mg", 1.000000, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 208: Magnesium Oxide ---
+    mat = openmc.Material(material_id=208, name="Magnesium Oxide")
+    mat.set_density("g/cc", 3.58)
+    mat.add_nuclide("O16", 0.395884, "wo")
+    mat.add_nuclide("O17", 0.000160, "wo")
+    mat.add_nuclide("O18", 0.000915, "wo")
+    mat.add_element("Mg", 0.603041, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 209: Magnesium Tetraborate ---
+    mat = openmc.Material(material_id=209, name="Magnesium Tetraborate")
+    mat.set_density("g/cc", 2.53)
+    mat.add_nuclide("B10", 0.044389, "wo")
+    mat.add_nuclide("B11", 0.196451, "wo")
+    mat.add_nuclide("O16", 0.622050, "wo")
+    mat.add_nuclide("O17", 0.000252, "wo")
+    mat.add_nuclide("O18", 0.001438, "wo")
+    mat.add_element("Mg", 0.135365, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 210: Masonite ---
+    mat = openmc.Material(material_id=210, name="Masonite")
+    mat.set_density("g/cc", 1.3)
+    mat.add_nuclide("H1", 0.062150, "wo")
+    mat.add_nuclide("H2", 0.000014, "wo")
+    mat.add_element("C", 0.444452, "wo")
+    mat.add_nuclide("O16", 0.492044, "wo")
+    mat.add_nuclide("O17", 0.000199, "wo")
+    mat.add_nuclide("O18", 0.001138, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 211: Melamine ---
+    mat = openmc.Material(material_id=211, name="Melamine")
+    mat.set_density("g/cc", 1.573)
+    mat.add_nuclide("H1", 0.047940, "wo")
+    mat.add_nuclide("H2", 0.000011, "wo")
+    mat.add_element("C", 0.285693, "wo")
+    mat.add_nuclide("N14", 0.663750, "wo")
+    mat.add_nuclide("N15", 0.002598, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 212: Melamine Formaldehyde ---
+    mat = openmc.Material(material_id=212, name="Melamine Formaldehyde")
+    mat.set_density("g/cc", 1.35)
+    mat.add_nuclide("H1", 0.046669, "wo")
+    mat.add_nuclide("H2", 0.000011, "wo")
+    mat.add_element("C", 0.397307, "wo")
+    mat.add_nuclide("N14", 0.553838, "wo")
+    mat.add_nuclide("N15", 0.002167, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 213: Mercuric Iodide ---
+    mat = openmc.Material(material_id=213, name="Mercuric Iodide")
+    mat.set_density("g/cc", 6.36)
+    mat.add_nuclide("I127", 0.558557, "wo")
+    mat.add_element("Hg", 0.441443, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 214: Mercury ---
+    mat = openmc.Material(material_id=214, name="Mercury")
+    mat.set_density("g/cc", 13.546)
+    mat.add_element("Hg", 1.000000, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 215: Methane ---
+    mat = openmc.Material(material_id=215, name="Methane")
+    mat.set_density("g/cc", 0.000667151)
+    mat.add_nuclide("H1", 0.251260, "wo")
+    mat.add_nuclide("H2", 0.000058, "wo")
+    mat.add_element("C", 0.748674, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 216: Methanol ---
+    mat = openmc.Material(material_id=216, name="Methanol")
+    mat.set_density("g/cc", 0.7914)
+    mat.add_nuclide("H1", 0.125799, "wo")
+    mat.add_nuclide("H2", 0.000029, "wo")
+    mat.add_element("C", 0.374840, "wo")
+    mat.add_nuclide("O16", 0.497974, "wo")
+    mat.add_nuclide("O17", 0.000202, "wo")
+    mat.add_nuclide("O18", 0.001152, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 217: Methylene Chloride ---
+    mat = openmc.Material(material_id=217, name="Methylene Chloride")
+    mat.set_density("g/cc", 1.3266)
+    mat.add_nuclide("H1", 0.023730, "wo")
+    mat.add_nuclide("H2", 0.000005, "wo")
+    mat.add_element("C", 0.141418, "wo")
+    mat.add_nuclide("Cl35", 0.623868, "wo")
+    mat.add_nuclide("Cl37", 0.211011, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 218: Molybdenum ---
+    mat = openmc.Material(material_id=218, name="Molybdenum")
+    mat.set_density("g/cc", 10.22)
+    mat.add_element("Mo", 1.000000, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 219: Monosodium Titanate, MST ---
+    mat = openmc.Material(material_id=219, name="Monosodium Titanate, MST")
+    mat.set_density("g/cc", 1.0)
+    mat.add_nuclide("H1", 0.005045, "wo")
+    mat.add_nuclide("H2", 0.000001, "wo")
+    mat.add_nuclide("O16", 0.399443, "wo")
+    mat.add_nuclide("O17", 0.000162, "wo")
+    mat.add_nuclide("O18", 0.000924, "wo")
+    mat.add_nuclide("Na23", 0.115105, "wo")
+    mat.add_element("Ti", 0.479320, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 220: Mortar ---
+    mat = openmc.Material(material_id=220, name="Mortar")
+    mat.set_density("g/cc", 1.97)
+    mat.add_nuclide("Al27", 0.232525, "wo")
+    mat.add_element("Ca", 0.002186, "wo")
+    mat.add_nuclide("O16", 0.486782, "wo")
+    mat.add_nuclide("O17", 0.000197, "wo")
+    mat.add_nuclide("O18", 0.001126, "wo")
+    mat.add_element("Fe", 0.011408, "wo")
+    mat.add_element("K", 0.007616, "wo")
+    mat.add_nuclide("Na23", 0.020418, "wo")
+    mat.add_element("Si", 0.229189, "wo")
+    mat.add_element("Ti", 0.008553, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 221: Muscle Equivalent-Liquid, with sucrose ---
+    mat = openmc.Material(material_id=221, name="Muscle Equivalent-Liquid, with sucrose")
+    mat.set_density("g/cc", 1.11)
+    mat.add_nuclide("H1", 0.098208, "wo")
+    mat.add_nuclide("H2", 0.000023, "wo")
+    mat.add_element("C", 0.156214, "wo")
+    mat.add_nuclide("N14", 0.035312, "wo")
+    mat.add_nuclide("N15", 0.000138, "wo")
+    mat.add_nuclide("O16", 0.708177, "wo")
+    mat.add_nuclide("O17", 0.000287, "wo")
+    mat.add_nuclide("O18", 0.001638, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 222: Muscle Equivalent-Liquid, without sucrose ---
+    mat = openmc.Material(material_id=222, name="Muscle Equivalent-Liquid, without sucrose")
+    mat.set_density("g/cc", 1.07)
+    mat.add_nuclide("H1", 0.101942, "wo")
+    mat.add_nuclide("H2", 0.000023, "wo")
+    mat.add_element("C", 0.120058, "wo")
+    mat.add_nuclide("N14", 0.035312, "wo")
+    mat.add_nuclide("N15", 0.000138, "wo")
+    mat.add_nuclide("O16", 0.740510, "wo")
+    mat.add_nuclide("O17", 0.000300, "wo")
+    mat.add_nuclide("O18", 0.001712, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 223: Muscle, Skeletal ---
+    mat = openmc.Material(material_id=223, name="Muscle, Skeletal")
+    mat.set_density("g/cc", 1.04)
+    mat.add_nuclide("H1", 0.100610, "wo")
+    mat.add_nuclide("H2", 0.000023, "wo")
+    mat.add_element("C", 0.107830, "wo")
+    mat.add_nuclide("N14", 0.027572, "wo")
+    mat.add_nuclide("N15", 0.000108, "wo")
+    mat.add_nuclide("O16", 0.752728, "wo")
+    mat.add_nuclide("O17", 0.000305, "wo")
+    mat.add_nuclide("O18", 0.001741, "wo")
+    mat.add_nuclide("Na23", 0.000750, "wo")
+    mat.add_element("Mg", 0.000190, "wo")
+    mat.add_nuclide("P31", 0.001800, "wo")
+    mat.add_element("S", 0.002410, "wo")
+    mat.add_nuclide("Cl35", 0.000590, "wo")
+    mat.add_nuclide("Cl37", 0.000200, "wo")
+    mat.add_element("K", 0.003020, "wo")
+    mat.add_element("Ca", 0.000030, "wo")
+    mat.add_element("Fe", 0.000040, "wo")
+    mat.add_element("Zn", 0.000050, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 224: Muscle, Striated ---
+    mat = openmc.Material(material_id=224, name="Muscle, Striated")
+    mat.set_density("g/cc", 1.04)
+    mat.add_nuclide("H1", 0.101970, "wo")
+    mat.add_nuclide("H2", 0.000023, "wo")
+    mat.add_element("C", 0.123000, "wo")
+    mat.add_nuclide("N14", 0.034863, "wo")
+    mat.add_nuclide("N15", 0.000136, "wo")
+    mat.add_nuclide("O16", 0.727028, "wo")
+    mat.add_nuclide("O17", 0.000294, "wo")
+    mat.add_nuclide("O18", 0.001681, "wo")
+    mat.add_nuclide("Na23", 0.000800, "wo")
+    mat.add_element("Mg", 0.000200, "wo")
+    mat.add_nuclide("P31", 0.002000, "wo")
+    mat.add_element("S", 0.005000, "wo")
+    mat.add_element("K", 0.003000, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 225: NE-213 Equivalent ---
+    mat = openmc.Material(material_id=225, name="NE-213 Equivalent")
+    mat.set_density("g/cc", 0.874)
+    mat.add_element("C", 0.905055, "wo")
+    mat.add_nuclide("H1", 0.094920, "wo")
+    mat.add_nuclide("H2", 0.000022, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 226: Neon ---
+    mat = openmc.Material(material_id=226, name="Neon")
+    mat.set_density("g/cc", 0.000838505)
+    mat.add_nuclide("Ne20", 0.896404, "wo")
+    mat.add_nuclide("Ne21", 0.002809, "wo")
+    mat.add_nuclide("Ne22", 0.100804, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 227: Nickel ---
+    mat = openmc.Material(material_id=227, name="Nickel")
+    mat.set_density("g/cc", 8.902)
+    mat.add_element("Ni", 1.000000, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 228: Niobium ---
+    mat = openmc.Material(material_id=228, name="Niobium")
+    mat.set_density("g/cc", 8.57)
+    mat.add_nuclide("Nb93", 1.000000, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 229: Nitrogen ---
+    mat = openmc.Material(material_id=229, name="Nitrogen")
+    mat.set_density("g/cc", 0.00116528)
+    mat.add_nuclide("N14", 0.996091, "wo")
+    mat.add_nuclide("N15", 0.003898, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 230: Nylon, Dupont ELVAmide 8062 ---
+    mat = openmc.Material(material_id=230, name="Nylon, Dupont ELVAmide 8062")
+    mat.set_density("g/cc", 1.08)
+    mat.add_nuclide("H1", 0.103482, "wo")
+    mat.add_nuclide("H2", 0.000024, "wo")
+    mat.add_element("C", 0.648416, "wo")
+    mat.add_nuclide("N14", 0.099147, "wo")
+    mat.add_nuclide("N15", 0.000388, "wo")
+    mat.add_nuclide("O16", 0.148137, "wo")
+    mat.add_nuclide("O17", 0.000060, "wo")
+    mat.add_nuclide("O18", 0.000343, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 231: Nylon, Type 11 (Rilsan) ---
+    mat = openmc.Material(material_id=231, name="Nylon, Type 11 (Rilsan)")
+    mat.set_density("g/cc", 1.425)
+    mat.add_nuclide("H1", 0.115456, "wo")
+    mat.add_nuclide("H2", 0.000027, "wo")
+    mat.add_element("C", 0.720805, "wo")
+    mat.add_nuclide("N14", 0.076120, "wo")
+    mat.add_nuclide("N15", 0.000298, "wo")
+    mat.add_nuclide("O16", 0.087053, "wo")
+    mat.add_nuclide("O17", 0.000035, "wo")
+    mat.add_nuclide("O18", 0.000201, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 232: Nylon, Type 6 and Type 6/6 ---
+    mat = openmc.Material(material_id=232, name="Nylon, Type 6 and Type 6/6")
+    mat.set_density("g/cc", 1.14)
+    mat.add_nuclide("H1", 0.097959, "wo")
+    mat.add_nuclide("H2", 0.000023, "wo")
+    mat.add_element("C", 0.636843, "wo")
+    mat.add_nuclide("N14", 0.123298, "wo")
+    mat.add_nuclide("N15", 0.000483, "wo")
+    mat.add_nuclide("O16", 0.141007, "wo")
+    mat.add_nuclide("O17", 0.000057, "wo")
+    mat.add_nuclide("O18", 0.000326, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 233: Nylon, Type 6/10 ---
+    mat = openmc.Material(material_id=233, name="Nylon, Type 6/10")
+    mat.set_density("g/cc", 1.14)
+    mat.add_nuclide("H1", 0.107043, "wo")
+    mat.add_nuclide("H2", 0.000025, "wo")
+    mat.add_element("C", 0.680436, "wo")
+    mat.add_nuclide("N14", 0.098803, "wo")
+    mat.add_nuclide("N15", 0.000387, "wo")
+    mat.add_nuclide("O16", 0.112995, "wo")
+    mat.add_nuclide("O17", 0.000046, "wo")
+    mat.add_nuclide("O18", 0.000261, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 234: Oil, Crude (Heavy, Cold Lake, Canada) ---
+    mat = openmc.Material(material_id=234, name="Oil, Crude (Heavy, Cold Lake, Canada)")
+    mat.set_density("g/cc", 0.97)
+    mat.add_nuclide("H1", 0.103973, "wo")
+    mat.add_nuclide("H2", 0.000024, "wo")
+    mat.add_element("C", 0.837000, "wo")
+    mat.add_nuclide("N14", 0.003984, "wo")
+    mat.add_nuclide("N15", 0.000016, "wo")
+    mat.add_nuclide("O16", 0.010970, "wo")
+    mat.add_nuclide("O17", 0.000004, "wo")
+    mat.add_nuclide("O18", 0.000025, "wo")
+    mat.add_element("S", 0.044000, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 235: Oil, Crude (Heavy, Mexican) ---
+    mat = openmc.Material(material_id=235, name="Oil, Crude (Heavy, Mexican)")
+    mat.set_density("g/cc", 0.975)
+    mat.add_nuclide("H1", 0.104012, "wo")
+    mat.add_nuclide("H2", 0.000024, "wo")
+    mat.add_element("C", 0.853733, "wo")
+    mat.add_element("S", 0.042228, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 236: Oil, Crude (Heavy, Qayarah, Iraq) ---
+    mat = openmc.Material(material_id=236, name="Oil, Crude (Heavy, Qayarah, Iraq)")
+    mat.set_density("g/cc", 0.97)
+    mat.add_nuclide("H1", 0.101973, "wo")
+    mat.add_nuclide("H2", 0.000023, "wo")
+    mat.add_element("C", 0.807000, "wo")
+    mat.add_nuclide("N14", 0.006973, "wo")
+    mat.add_nuclide("N15", 0.000027, "wo")
+    mat.add_element("S", 0.084000, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 237: Oil, Crude (Light, Texas) ---
+    mat = openmc.Material(material_id=237, name="Oil, Crude (Light, Texas)")
+    mat.set_density("g/cc", 0.875)
+    mat.add_nuclide("H1", 0.123214, "wo")
+    mat.add_nuclide("H2", 0.000028, "wo")
+    mat.add_element("C", 0.852205, "wo")
+    mat.add_nuclide("N14", 0.006987, "wo")
+    mat.add_nuclide("N15", 0.000027, "wo")
+    mat.add_element("S", 0.017535, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 238: Oil, Fuel (Calif.) ---
+    mat = openmc.Material(material_id=238, name="Oil, Fuel (Calif.)")
+    mat.set_density("g/cc", 0.955)
+    mat.add_nuclide("H1", 0.125845, "wo")
+    mat.add_nuclide("H2", 0.000029, "wo")
+    mat.add_element("C", 0.862308, "wo")
+    mat.add_element("S", 0.011814, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 239: Oil, Hydraulic ---
+    mat = openmc.Material(material_id=239, name="Oil, Hydraulic")
+    mat.set_density("g/cc", 0.871)
+    mat.add_nuclide("H1", 0.040487, "wo")
+    mat.add_nuclide("H2", 0.000009, "wo")
+    mat.add_element("C", 0.584908, "wo")
+    mat.add_nuclide("O16", 0.077705, "wo")
+    mat.add_nuclide("O17", 0.000031, "wo")
+    mat.add_nuclide("O18", 0.000180, "wo")
+    mat.add_nuclide("P31", 0.037710, "wo")
+    mat.add_nuclide("Cl35", 0.193524, "wo")
+    mat.add_nuclide("Cl37", 0.065456, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 240: Oil, Lard ---
+    mat = openmc.Material(material_id=240, name="Oil, Lard")
+    mat.set_density("g/cc", 0.915)
+    mat.add_nuclide("H1", 0.117594, "wo")
+    mat.add_nuclide("H2", 0.000027, "wo")
+    mat.add_element("C", 0.778650, "wo")
+    mat.add_nuclide("O16", 0.103443, "wo")
+    mat.add_nuclide("O17", 0.000042, "wo")
+    mat.add_nuclide("O18", 0.000239, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 241: Oxygen ---
+    mat = openmc.Material(material_id=241, name="Oxygen")
+    mat.set_density("g/cc", 0.00133151)
+    mat.add_nuclide("O16", 0.997290, "wo")
+    mat.add_nuclide("O17", 0.000404, "wo")
+    mat.add_nuclide("O18", 0.002306, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 242: P-10 gas ---
+    mat = openmc.Material(material_id=242, name="P-10 gas")
+    mat.set_density("g/cc", 0.001561)
+    mat.add_nuclide("H1", 0.010732, "wo")
+    mat.add_nuclide("H2", 0.000002, "wo")
+    mat.add_element("C", 0.031979, "wo")
+    mat.add_element("Ar", 0.957286, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 243: P-5 gas ---
+    mat = openmc.Material(material_id=243, name="P-5 gas")
+    mat.set_density("g/cc", 0.001611)
+    mat.add_nuclide("H1", 0.005201, "wo")
+    mat.add_nuclide("H2", 0.000001, "wo")
+    mat.add_element("C", 0.015496, "wo")
+    mat.add_element("Ar", 0.979302, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 244: P-terphenyl ---
+    mat = openmc.Material(material_id=244, name="P-terphenyl")
+    mat.set_density("g/cc", 1.28)
+    mat.add_nuclide("H1", 0.061258, "wo")
+    mat.add_nuclide("H2", 0.000014, "wo")
+    mat.add_element("C", 0.938726, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 245: Palladium ---
+    mat = openmc.Material(material_id=245, name="Palladium")
+    mat.set_density("g/cc", 12.02)
+    mat.add_nuclide("Pd102", 0.009767, "wo")
+    mat.add_nuclide("Pd104", 0.108766, "wo")
+    mat.add_nuclide("Pd105", 0.220121, "wo")
+    mat.add_nuclide("Pd106", 0.271974, "wo")
+    mat.add_nuclide("Pd108", 0.268290, "wo")
+    mat.add_nuclide("Pd110", 0.121038, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 246: Paper, News print ---
+    mat = openmc.Material(material_id=246, name="Paper, News print")
+    mat.set_density("g/cc", 0.65)
+    mat.add_nuclide("H1", 0.062150, "wo")
+    mat.add_nuclide("H2", 0.000014, "wo")
+    mat.add_element("C", 0.444452, "wo")
+    mat.add_nuclide("O16", 0.492044, "wo")
+    mat.add_nuclide("O17", 0.000199, "wo")
+    mat.add_nuclide("O18", 0.001138, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 247: Paper, glossy ---
+    mat = openmc.Material(material_id=247, name="Paper, glossy")
+    mat.set_density("g/cc", 1.135)
+    mat.add_nuclide("H1", 0.062150, "wo")
+    mat.add_nuclide("H2", 0.000014, "wo")
+    mat.add_element("C", 0.444452, "wo")
+    mat.add_nuclide("O16", 0.492044, "wo")
+    mat.add_nuclide("O17", 0.000199, "wo")
+    mat.add_nuclide("O18", 0.001138, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 248: Paper, printer ---
+    mat = openmc.Material(material_id=248, name="Paper, printer")
+    mat.set_density("g/cc", 0.69)
+    mat.add_nuclide("H1", 0.062150, "wo")
+    mat.add_nuclide("H2", 0.000014, "wo")
+    mat.add_element("C", 0.444452, "wo")
+    mat.add_nuclide("O16", 0.492044, "wo")
+    mat.add_nuclide("O17", 0.000199, "wo")
+    mat.add_nuclide("O18", 0.001138, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 249: Photographic Emulsion, Gel in ---
+    mat = openmc.Material(material_id=249, name="Photographic Emulsion, Gel in")
+    mat.set_density("g/cc", 1.2914)
+    mat.add_nuclide("H1", 0.081159, "wo")
+    mat.add_nuclide("H2", 0.000019, "wo")
+    mat.add_element("C", 0.416060, "wo")
+    mat.add_nuclide("N14", 0.110805, "wo")
+    mat.add_nuclide("N15", 0.000434, "wo")
+    mat.add_nuclide("O16", 0.379609, "wo")
+    mat.add_nuclide("O17", 0.000154, "wo")
+    mat.add_nuclide("O18", 0.000878, "wo")
+    mat.add_element("S", 0.010880, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 250: Photographic Emulsion, Kodak Type AA ---
+    mat = openmc.Material(material_id=250, name="Photographic Emulsion, Kodak Type AA")
+    mat.set_density("g/cc", 2.2)
+    mat.add_nuclide("H1", 0.030492, "wo")
+    mat.add_nuclide("H2", 0.000007, "wo")
+    mat.add_element("C", 0.210700, "wo")
+    mat.add_nuclide("N14", 0.071818, "wo")
+    mat.add_nuclide("N15", 0.000281, "wo")
+    mat.add_nuclide("O16", 0.162758, "wo")
+    mat.add_nuclide("O17", 0.000066, "wo")
+    mat.add_nuclide("O18", 0.000376, "wo")
+    mat.add_nuclide("Br79", 0.111544, "wo")
+    mat.add_nuclide("Br81", 0.111255, "wo")
+    mat.add_element("Ag", 0.300700, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 251: Photographic Emulsion, Standard Nuclear ---
+    mat = openmc.Material(material_id=251, name="Photographic Emulsion, Standard Nuclear")
+    mat.set_density("g/cc", 3.815)
+    mat.add_nuclide("H1", 0.014096, "wo")
+    mat.add_nuclide("H2", 0.000003, "wo")
+    mat.add_element("C", 0.072261, "wo")
+    mat.add_nuclide("N14", 0.019244, "wo")
+    mat.add_nuclide("N15", 0.000075, "wo")
+    mat.add_nuclide("O16", 0.065922, "wo")
+    mat.add_nuclide("O17", 0.000027, "wo")
+    mat.add_nuclide("O18", 0.000152, "wo")
+    mat.add_element("S", 0.001890, "wo")
+    mat.add_nuclide("Br79", 0.174778, "wo")
+    mat.add_nuclide("Br81", 0.174324, "wo")
+    mat.add_element("Ag", 0.474105, "wo")
+    mat.add_nuclide("I127", 0.003120, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 252: Platinum ---
+    mat = openmc.Material(material_id=252, name="Platinum")
+    mat.set_density("g/cc", 21.45)
+    mat.add_element("Pt", 1.000000, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 253: Plutonium Bromide ---
+    mat = openmc.Material(material_id=253, name="Plutonium Bromide")
+    mat.set_density("g/cc", 6.75)
+    mat.add_nuclide("Br79", 0.250633, "wo")
+    mat.add_nuclide("Br81", 0.249982, "wo")
+    mat.add_nuclide("Pu238", 0.000250, "wo")
+    mat.add_nuclide("Pu239", 0.466923, "wo")
+    mat.add_nuclide("Pu240", 0.029963, "wo")
+    mat.add_nuclide("Pu241", 0.001998, "wo")
+    mat.add_nuclide("Pu242", 0.000250, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 254: Plutonium Carbide ---
+    mat = openmc.Material(material_id=254, name="Plutonium Carbide")
+    mat.set_density("g/cc", 13.6)
+    mat.add_element("C", 0.047826, "wo")
+    mat.add_nuclide("Pu238", 0.000476, "wo")
+    mat.add_nuclide("Pu239", 0.890283, "wo")
+    mat.add_nuclide("Pu240", 0.057130, "wo")
+    mat.add_nuclide("Pu241", 0.003809, "wo")
+    mat.add_nuclide("Pu242", 0.000476, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 255: Plutonium Chloride ---
+    mat = openmc.Material(material_id=255, name="Plutonium Chloride")
+    mat.set_density("g/cc", 5.71)
+    mat.add_nuclide("Cl35", 0.230052, "wo")
+    mat.add_nuclide("Cl37", 0.077810, "wo")
+    mat.add_nuclide("Pu238", 0.000346, "wo")
+    mat.add_nuclide("Pu239", 0.647161, "wo")
+    mat.add_nuclide("Pu240", 0.041529, "wo")
+    mat.add_nuclide("Pu241", 0.002769, "wo")
+    mat.add_nuclide("Pu242", 0.000346, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 256: Plutonium Dioxide ---
+    mat = openmc.Material(material_id=256, name="Plutonium Dioxide")
+    mat.set_density("g/cc", 11.46)
+    mat.add_nuclide("O16", 0.117705, "wo")
+    mat.add_nuclide("O17", 0.000048, "wo")
+    mat.add_nuclide("O18", 0.000272, "wo")
+    mat.add_nuclide("Pu238", 0.000441, "wo")
+    mat.add_nuclide("Pu239", 0.824647, "wo")
+    mat.add_nuclide("Pu240", 0.052919, "wo")
+    mat.add_nuclide("Pu241", 0.003528, "wo")
+    mat.add_nuclide("Pu242", 0.000441, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 257: Plutonium Fluoride (PuF3) ---
+    mat = openmc.Material(material_id=257, name="Plutonium Fluoride (PuF3)")
+    mat.set_density("g/cc", 9.33)
+    mat.add_nuclide("F19", 0.192476, "wo")
+    mat.add_nuclide("Pu238", 0.000404, "wo")
+    mat.add_nuclide("Pu239", 0.755035, "wo")
+    mat.add_nuclide("Pu240", 0.048451, "wo")
+    mat.add_nuclide("Pu241", 0.003230, "wo")
+    mat.add_nuclide("Pu242", 0.000404, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 258: Plutonium Fluoride (PuF4) ---
+    mat = openmc.Material(material_id=258, name="Plutonium Fluoride (PuF4)")
+    mat.set_density("g/cc", 7.1)
+    mat.add_nuclide("F19", 0.241162, "wo")
+    mat.add_nuclide("Pu238", 0.000379, "wo")
+    mat.add_nuclide("Pu239", 0.709514, "wo")
+    mat.add_nuclide("Pu240", 0.045530, "wo")
+    mat.add_nuclide("Pu241", 0.003035, "wo")
+    mat.add_nuclide("Pu242", 0.000379, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 259: Plutonium Fluoride (PuF6) ---
+    mat = openmc.Material(material_id=259, name="Plutonium Fluoride (PuF6)")
+    mat.set_density("g/cc", 5.08)
+    mat.add_nuclide("F19", 0.322817, "wo")
+    mat.add_nuclide("Pu238", 0.000339, "wo")
+    mat.add_nuclide("Pu239", 0.633166, "wo")
+    mat.add_nuclide("Pu240", 0.040631, "wo")
+    mat.add_nuclide("Pu241", 0.002709, "wo")
+    mat.add_nuclide("Pu242", 0.000339, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 260: Plutonium Iodide ---
+    mat = openmc.Material(material_id=260, name="Plutonium Iodide")
+    mat.set_density("g/cc", 6.92)
+    mat.add_nuclide("I127", 0.614218, "wo")
+    mat.add_nuclide("Pu238", 0.000193, "wo")
+    mat.add_nuclide("Pu239", 0.360706, "wo")
+    mat.add_nuclide("Pu240", 0.023147, "wo")
+    mat.add_nuclide("Pu241", 0.001543, "wo")
+    mat.add_nuclide("Pu242", 0.000193, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 261: Plutonium Nitrate ---
+    mat = openmc.Material(material_id=261, name="Plutonium Nitrate")
+    mat.set_density("g/cc", 2.447)
+    mat.add_nuclide("N14", 0.114563, "wo")
+    mat.add_nuclide("N15", 0.000448, "wo")
+    mat.add_nuclide("O16", 0.393054, "wo")
+    mat.add_nuclide("O17", 0.000159, "wo")
+    mat.add_nuclide("O18", 0.000909, "wo")
+    mat.add_nuclide("Pu238", 0.000245, "wo")
+    mat.add_nuclide("Pu239", 0.458960, "wo")
+    mat.add_nuclide("Pu240", 0.029452, "wo")
+    mat.add_nuclide("Pu241", 0.001963, "wo")
+    mat.add_nuclide("Pu242", 0.000245, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 262: Plutonium Nitride ---
+    mat = openmc.Material(material_id=262, name="Plutonium Nitride")
+    mat.set_density("g/cc", 14.25)
+    mat.add_nuclide("N14", 0.055119, "wo")
+    mat.add_nuclide("N15", 0.000216, "wo")
+    mat.add_nuclide("Pu238", 0.000472, "wo")
+    mat.add_nuclide("Pu239", 0.883262, "wo")
+    mat.add_nuclide("Pu240", 0.056680, "wo")
+    mat.add_nuclide("Pu241", 0.003779, "wo")
+    mat.add_nuclide("Pu242", 0.000472, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 263: Plutonium Oxide (Pu2O3) ---
+    mat = openmc.Material(material_id=263, name="Plutonium Oxide (Pu2O3)")
+    mat.set_density("g/cc", 10.5)
+    mat.add_nuclide("O16", 0.090963, "wo")
+    mat.add_nuclide("O17", 0.000037, "wo")
+    mat.add_nuclide("O18", 0.000210, "wo")
+    mat.add_nuclide("Pu238", 0.000454, "wo")
+    mat.add_nuclide("Pu239", 0.849719, "wo")
+    mat.add_nuclide("Pu240", 0.054527, "wo")
+    mat.add_nuclide("Pu241", 0.003635, "wo")
+    mat.add_nuclide("Pu242", 0.000454, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 264: Plutonium Oxide (PuO) ---
+    mat = openmc.Material(material_id=264, name="Plutonium Oxide (PuO)")
+    mat.set_density("g/cc", 14.0)
+    mat.add_nuclide("O16", 0.062543, "wo")
+    mat.add_nuclide("O17", 0.000025, "wo")
+    mat.add_nuclide("O18", 0.000145, "wo")
+    mat.add_nuclide("Pu238", 0.000469, "wo")
+    mat.add_nuclide("Pu239", 0.876363, "wo")
+    mat.add_nuclide("Pu240", 0.056237, "wo")
+    mat.add_nuclide("Pu241", 0.003749, "wo")
+    mat.add_nuclide("Pu242", 0.000469, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 265: Plutonium, Aged WGPu (A: 4-7% Pu240) ---
+    mat = openmc.Material(material_id=265, name="Plutonium, Aged WGPu (A: 4-7% Pu240)")
+    mat.set_density("g/cc", 19.84)
+    mat.add_nuclide("Pu238", 0.000100, "wo")
+    mat.add_nuclide("Pu239", 0.936294, "wo")
+    mat.add_nuclide("Pu240", 0.059910, "wo")
+    mat.add_nuclide("Pu241", 0.001997, "wo")
+    mat.add_nuclide("Pu242", 0.000300, "wo")
+    mat.add_nuclide("Am241", 0.001400, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 266: Plutonium, Aged WGPu (B: 10-13% Pu240) ---
+    mat = openmc.Material(material_id=266, name="Plutonium, Aged WGPu (B: 10-13% Pu240)")
+    mat.set_density("g/cc", 19.84)
+    mat.add_nuclide("Pu238", 0.000892, "wo")
+    mat.add_nuclide("Pu239", 0.861837, "wo")
+    mat.add_nuclide("Pu240", 0.117073, "wo")
+    mat.add_nuclide("Pu241", 0.009913, "wo")
+    mat.add_nuclide("Pu242", 0.001685, "wo")
+    mat.add_nuclide("Am241", 0.008600, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 267: Plutonium, Aged WGPu (C: 16-19% Pu240) ---
+    mat = openmc.Material(material_id=267, name="Plutonium, Aged WGPu (C: 16-19% Pu240)")
+    mat.set_density("g/cc", 19.84)
+    mat.add_nuclide("Pu238", 0.002333, "wo")
+    mat.add_nuclide("Pu239", 0.783937, "wo")
+    mat.add_nuclide("Pu240", 0.165029, "wo")
+    mat.add_nuclide("Pu241", 0.013995, "wo")
+    mat.add_nuclide("Pu242", 0.006706, "wo")
+    mat.add_nuclide("Am241", 0.028000, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 268: Plutonium, DOE 3013 WGPu ---
+    mat = openmc.Material(material_id=268, name="Plutonium, DOE 3013 WGPu")
+    mat.set_density("g/cc", 19.84)
+    mat.add_nuclide("Pu238", 0.000500, "wo")
+    mat.add_nuclide("Pu239", 0.935000, "wo")
+    mat.add_nuclide("Pu240", 0.060000, "wo")
+    mat.add_nuclide("Pu241", 0.004000, "wo")
+    mat.add_nuclide("Pu242", 0.000500, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 269: Plutonium, Fuel Grade ---
+    mat = openmc.Material(material_id=269, name="Plutonium, Fuel Grade")
+    mat.set_density("g/cc", 19.84)
+    mat.add_nuclide("Pu238", 0.001000, "wo")
+    mat.add_nuclide("Pu239", 0.861000, "wo")
+    mat.add_nuclide("Pu240", 0.120000, "wo")
+    mat.add_nuclide("Pu241", 0.016000, "wo")
+    mat.add_nuclide("Pu242", 0.002000, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 270: Plutonium, Power Grade ---
+    mat = openmc.Material(material_id=270, name="Plutonium, Power Grade")
+    mat.set_density("g/cc", 19.84)
+    mat.add_nuclide("Pu238", 0.009900, "wo")
+    mat.add_nuclide("Pu239", 0.623800, "wo")
+    mat.add_nuclide("Pu240", 0.217800, "wo")
+    mat.add_nuclide("Pu241", 0.118800, "wo")
+    mat.add_nuclide("Pu242", 0.029700, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 271: Plutonium, Shefelbine WGPu ---
+    mat = openmc.Material(material_id=271, name="Plutonium, Shefelbine WGPu")
+    mat.set_density("g/cc", 19.84)
+    mat.add_nuclide("Pu238", 0.000300, "wo")
+    mat.add_nuclide("Pu239", 0.939200, "wo")
+    mat.add_nuclide("Pu240", 0.057000, "wo")
+    mat.add_nuclide("Pu241", 0.003000, "wo")
+    mat.add_nuclide("Pu242", 0.000300, "wo")
+    mat.add_nuclide("Am241", 0.000200, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 272: Polycarbonate ---
+    mat = openmc.Material(material_id=272, name="Polycarbonate")
+    mat.set_density("g/cc", 1.2)
+    mat.add_nuclide("H1", 0.055482, "wo")
+    mat.add_nuclide("H2", 0.000013, "wo")
+    mat.add_element("C", 0.755741, "wo")
+    mat.add_nuclide("O16", 0.188250, "wo")
+    mat.add_nuclide("O17", 0.000076, "wo")
+    mat.add_nuclide("O18", 0.000435, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 273: Polyethylene Terephthalate (PET) ---
+    mat = openmc.Material(material_id=273, name="Polyethylene Terephthalate (PET)")
+    mat.set_density("g/cc", 1.38)
+    mat.add_nuclide("H1", 0.041951, "wo")
+    mat.add_nuclide("H2", 0.000010, "wo")
+    mat.add_element("C", 0.625008, "wo")
+    mat.add_nuclide("O16", 0.332128, "wo")
+    mat.add_nuclide("O17", 0.000134, "wo")
+    mat.add_nuclide("O18", 0.000768, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 274: Polyethylene, Borated ---
+    mat = openmc.Material(material_id=274, name="Polyethylene, Borated")
+    mat.set_density("g/cc", 1.0)
+    mat.add_nuclide("H1", 0.125322, "wo")
+    mat.add_nuclide("H2", 0.000029, "wo")
+    mat.add_nuclide("B10", 0.018427, "wo")
+    mat.add_nuclide("B11", 0.081550, "wo")
+    mat.add_element("C", 0.774645, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 275: Polyethylene, Non-borated ---
+    mat = openmc.Material(material_id=275, name="Polyethylene, Non-borated")
+    mat.set_density("g/cc", 0.93)
+    mat.add_nuclide("H1", 0.143686, "wo")
+    mat.add_nuclide("H2", 0.000033, "wo")
+    mat.add_element("C", 0.856276, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 276: Polyisocyanurate (PIR) ---
+    mat = openmc.Material(material_id=276, name="Polyisocyanurate (PIR)")
+    mat.set_density("g/cc", 0.0482)
+    mat.add_nuclide("H1", 0.040268, "wo")
+    mat.add_nuclide("H2", 0.000009, "wo")
+    mat.add_element("C", 0.719912, "wo")
+    mat.add_nuclide("N14", 0.111505, "wo")
+    mat.add_nuclide("N15", 0.000436, "wo")
+    mat.add_nuclide("O16", 0.127520, "wo")
+    mat.add_nuclide("O17", 0.000052, "wo")
+    mat.add_nuclide("O18", 0.000295, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 277: Polypropylene (PP) ---
+    mat = openmc.Material(material_id=277, name="Polypropylene (PP)")
+    mat.set_density("g/cc", 0.9)
+    mat.add_nuclide("H1", 0.143686, "wo")
+    mat.add_nuclide("H2", 0.000033, "wo")
+    mat.add_element("C", 0.856276, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 278: Polystyrene (PS) ---
+    mat = openmc.Material(material_id=278, name="Polystyrene (PS)")
+    mat.set_density("g/cc", 1.06)
+    mat.add_nuclide("H1", 0.077405, "wo")
+    mat.add_nuclide("H2", 0.000018, "wo")
+    mat.add_element("C", 0.922574, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 279: Polytetrafluoroethylene (PTFE) ---
+    mat = openmc.Material(material_id=279, name="Polytetrafluoroethylene (PTFE)")
+    mat.set_density("g/cc", 2.25)
+    mat.add_element("C", 0.240176, "wo")
+    mat.add_nuclide("F19", 0.759824, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 280: Polyurethane Foam (PUR) ---
+    mat = openmc.Material(material_id=280, name="Polyurethane Foam (PUR)")
+    mat.set_density("g/cc", 0.021)
+    mat.add_nuclide("H1", 0.040991, "wo")
+    mat.add_nuclide("H2", 0.000009, "wo")
+    mat.add_element("C", 0.543998, "wo")
+    mat.add_nuclide("N14", 0.120528, "wo")
+    mat.add_nuclide("N15", 0.000472, "wo")
+    mat.add_nuclide("O16", 0.293204, "wo")
+    mat.add_nuclide("O17", 0.000119, "wo")
+    mat.add_nuclide("O18", 0.000678, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 281: Polyvinyl Acetate (PVA) ---
+    mat = openmc.Material(material_id=281, name="Polyvinyl Acetate (PVA)")
+    mat.set_density("g/cc", 1.19)
+    mat.add_nuclide("H1", 0.070233, "wo")
+    mat.add_nuclide("H2", 0.000016, "wo")
+    mat.add_element("C", 0.558055, "wo")
+    mat.add_nuclide("O16", 0.370687, "wo")
+    mat.add_nuclide("O17", 0.000150, "wo")
+    mat.add_nuclide("O18", 0.000857, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 282: Polyvinyl Chloride (PVC) ---
+    mat = openmc.Material(material_id=282, name="Polyvinyl Chloride (PVC)")
+    mat.set_density("g/cc", 1.406)
+    mat.add_nuclide("H1", 0.048373, "wo")
+    mat.add_nuclide("H2", 0.000011, "wo")
+    mat.add_element("C", 0.384360, "wo")
+    mat.add_nuclide("Cl35", 0.423901, "wo")
+    mat.add_nuclide("Cl37", 0.143376, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 283: Polyvinyl Toluene (PVT) ---
+    mat = openmc.Material(material_id=283, name="Polyvinyl Toluene (PVT)")
+    mat.set_density("g/cc", 1.032)
+    mat.add_nuclide("H1", 0.085273, "wo")
+    mat.add_nuclide("H2", 0.000020, "wo")
+    mat.add_element("C", 0.914705, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 284: Polyvinylidene Chloride (PVDC) ---
+    mat = openmc.Material(material_id=284, name="Polyvinylidene Chloride (PVDC)")
+    mat.set_density("g/cc", 1.7)
+    mat_list.append(mat)
+
+
+    # --- PNNL 285: Potassium Aluminum Silicate ---
+    mat = openmc.Material(material_id=285, name="Potassium Aluminum Silicate")
+    mat.set_density("g/cc", 1.1)
+    mat.add_nuclide("O16", 0.458622, "wo")
+    mat.add_nuclide("O17", 0.000186, "wo")
+    mat.add_nuclide("O18", 0.001061, "wo")
+    mat.add_nuclide("Al27", 0.096941, "wo")
+    mat.add_element("Si", 0.302716, "wo")
+    mat.add_element("K", 0.140475, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 286: Potassium Iodide ---
+    mat = openmc.Material(material_id=286, name="Potassium Iodide")
+    mat.set_density("g/cc", 3.13)
+    mat.add_element("K", 0.235528, "wo")
+    mat.add_nuclide("I127", 0.764472, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 287: Potassium Oxide ---
+    mat = openmc.Material(material_id=287, name="Potassium Oxide")
+    mat.set_density("g/cc", 2.32)
+    mat.add_nuclide("O16", 0.169392, "wo")
+    mat.add_nuclide("O17", 0.000069, "wo")
+    mat.add_nuclide("O18", 0.000392, "wo")
+    mat.add_element("K", 0.830148, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 288: Propane (gas) ---
+    mat = openmc.Material(material_id=288, name="Propane (gas)")
+    mat.set_density("g/cc", 0.00187939)
+    mat.add_nuclide("H1", 0.182823, "wo")
+    mat.add_nuclide("H2", 0.000042, "wo")
+    mat.add_element("C", 0.817129, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 289: Propane (liquid) ---
+    mat = openmc.Material(material_id=289, name="Propane (liquid)")
+    mat.set_density("g/cc", 0.43)
+    mat.add_nuclide("H1", 0.182823, "wo")
+    mat.add_nuclide("H2", 0.000042, "wo")
+    mat.add_element("C", 0.817129, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 290: Quartz ---
+    mat = openmc.Material(material_id=290, name="Quartz")
+    mat.set_density("g/cc", 2.62)
+    mat.add_nuclide("O16", 0.531126, "wo")
+    mat.add_nuclide("O17", 0.000215, "wo")
+    mat.add_nuclide("O18", 0.001228, "wo")
+    mat.add_element("Si", 0.467430, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 291: Quartz Glass ---
+    mat = openmc.Material(material_id=291, name="Quartz Glass")
+    mat.set_density("g/cc", 2.2)
+    mat.add_nuclide("O16", 0.531126, "wo")
+    mat.add_nuclide("O17", 0.000215, "wo")
+    mat.add_nuclide("O18", 0.001228, "wo")
+    mat.add_element("Si", 0.467430, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 292: Radiochromic Dye Film, Nylon Base (RDF: NB) ---
+    mat = openmc.Material(material_id=292, name="Radiochromic Dye Film, Nylon Base (RDF: NB)")
+    mat.set_density("g/cc", 1.08)
+    mat.add_nuclide("H1", 0.101969, "wo")
+    mat.add_nuclide("H2", 0.000023, "wo")
+    mat.add_element("C", 0.654396, "wo")
+    mat.add_nuclide("N14", 0.098528, "wo")
+    mat.add_nuclide("N15", 0.000386, "wo")
+    mat.add_nuclide("O16", 0.144301, "wo")
+    mat.add_nuclide("O17", 0.000058, "wo")
+    mat.add_nuclide("O18", 0.000334, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 293: Rayon ---
+    mat = openmc.Material(material_id=293, name="Rayon")
+    mat.set_density("g/cc", 1.16)
+    mat.add_nuclide("H1", 0.062150, "wo")
+    mat.add_nuclide("H2", 0.000014, "wo")
+    mat.add_element("C", 0.444452, "wo")
+    mat.add_nuclide("O16", 0.492044, "wo")
+    mat.add_nuclide("O17", 0.000199, "wo")
+    mat.add_nuclide("O18", 0.001138, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 294: Rock (Average of 5 types) ---
+    mat = openmc.Material(material_id=294, name="Rock (Average of 5 types)")
+    mat.set_density("g/cc", 2.662)
+    mat.add_nuclide("H1", 0.001369, "wo")
+    mat.add_nuclide("H2", 0.000000, "wo")
+    mat.add_element("C", 0.059427, "wo")
+    mat.add_nuclide("O16", 0.449828, "wo")
+    mat.add_nuclide("O17", 0.000182, "wo")
+    mat.add_nuclide("O18", 0.001040, "wo")
+    mat.add_nuclide("Na23", 0.013988, "wo")
+    mat.add_element("Mg", 0.033044, "wo")
+    mat.add_nuclide("Al27", 0.058433, "wo")
+    mat.add_element("Si", 0.208330, "wo")
+    mat.add_nuclide("P31", 0.000477, "wo")
+    mat.add_element("S", 0.009045, "wo")
+    mat.add_element("K", 0.017022, "wo")
+    mat.add_element("Ca", 0.108803, "wo")
+    mat.add_element("Ti", 0.003639, "wo")
+    mat.add_nuclide("Mn55", 0.000454, "wo")
+    mat.add_element("Fe", 0.034919, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 295: Rock, Basalt ---
+    mat = openmc.Material(material_id=295, name="Rock, Basalt")
+    mat.set_density("g/cc", 3.01)
+    mat.add_nuclide("O16", 0.483336, "wo")
+    mat.add_nuclide("O17", 0.000196, "wo")
+    mat.add_nuclide("O18", 0.001118, "wo")
+    mat.add_nuclide("Na23", 0.027328, "wo")
+    mat.add_element("Mg", 0.004274, "wo")
+    mat.add_nuclide("Al27", 0.076189, "wo")
+    mat.add_element("Si", 0.336170, "wo")
+    mat.add_nuclide("P31", 0.000523, "wo")
+    mat.add_element("K", 0.034144, "wo")
+    mat.add_element("Ca", 0.012985, "wo")
+    mat.add_element("Ti", 0.001795, "wo")
+    mat.add_nuclide("Mn55", 0.000387, "wo")
+    mat.add_element("Fe", 0.021555, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 296: Rock, Granite ---
+    mat = openmc.Material(material_id=296, name="Rock, Granite")
+    mat.set_density("g/cc", 2.69)
+    mat.add_nuclide("O16", 0.441271, "wo")
+    mat.add_nuclide("O17", 0.000179, "wo")
+    mat.add_nuclide("O18", 0.001020, "wo")
+    mat.add_nuclide("Na23", 0.021700, "wo")
+    mat.add_element("Mg", 0.041879, "wo")
+    mat.add_nuclide("Al27", 0.083935, "wo")
+    mat.add_element("Si", 0.232811, "wo")
+    mat.add_nuclide("P31", 0.001476, "wo")
+    mat.add_element("K", 0.008920, "wo")
+    mat.add_element("Ca", 0.068974, "wo")
+    mat.add_element("Ti", 0.011151, "wo")
+    mat.add_nuclide("Mn55", 0.001541, "wo")
+    mat.add_element("Fe", 0.085142, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 297: Rock, Limestone ---
+    mat = openmc.Material(material_id=297, name="Rock, Limestone")
+    mat.set_density("g/cc", 2.6)
+    mat.add_element("C", 0.114006, "wo")
+    mat.add_nuclide("O16", 0.480901, "wo")
+    mat.add_nuclide("O17", 0.000195, "wo")
+    mat.add_nuclide("O18", 0.001112, "wo")
+    mat.add_element("Si", 0.023372, "wo")
+    mat.add_element("Ca", 0.380414, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 298: Rock, Sandstone ---
+    mat = openmc.Material(material_id=298, name="Rock, Sandstone")
+    mat.set_density("g/cc", 2.37)
+    mat.add_element("C", 0.000874, "wo")
+    mat.add_nuclide("O16", 0.513682, "wo")
+    mat.add_nuclide("O17", 0.000208, "wo")
+    mat.add_nuclide("O18", 0.001188, "wo")
+    mat.add_nuclide("Na23", 0.007316, "wo")
+    mat.add_element("Mg", 0.001620, "wo")
+    mat.add_nuclide("Al27", 0.020522, "wo")
+    mat.add_element("Si", 0.421080, "wo")
+    mat.add_nuclide("P31", 0.000005, "wo")
+    mat.add_element("K", 0.013509, "wo")
+    mat.add_element("Ca", 0.008931, "wo")
+    mat.add_element("Ti", 0.000200, "wo")
+    mat.add_element("Fe", 0.010862, "wo")
+    mat.add_nuclide("Mn55", 0.000003, "wo")
+    mat_list.append(mat)
+
+
+    # --- PNNL 299: Rock, Shale ---
+    mat = openmc.Material(material_id=299, name="Rock, Shale")
+    mat.set_density("g/cc", 2.6)
+    mat.add_nuclide("H1", 0.001483, "wo")
+    mat.add_nuclide("H2", 0.000000, "wo")
+    mat.add_element("C", 0.018890, "wo")
+    mat.add_nuclide("O16", 0.485083, "wo")
+    mat.add_nuclide("O17", 0.000196, "wo")
+    mat.add_nuclide("O18", 0.001122, "wo")
+    mat.add_nuclide("Na23", 0.004276, "wo")
+    mat.add_element("Mg", 0.006008, "wo")
+    mat.add_nuclide("Al27", 0.072577, "wo")
+    mat.add_element("Si", 0.317411, "wo")
+    mat.add_nuclide("P31", 0.000064, "wo")
+    mat.add_element("S", 0.009799, "wo")
+    mat.add_element("K", 0.017193, "wo")
+    mat.add_element("Ca", 0.029474, "wo")
+    mat.add_element("Ti", 0.002623, "wo")
+    mat.add_element("Fe", 0.033765, "wo")
+    mat.add_nuclide("Mn55", 0.000036, "wo")
+    mat_list.append(mat)
+
+
+
     return {m.id: m for m in mat_list}
 
 test = get_pnnl_mats()
