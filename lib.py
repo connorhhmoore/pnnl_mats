@@ -5430,6 +5430,170 @@ def get_pnnl_mats(xs_lib: str = "endfb81") -> dict[int, openmc.Material]:
     mat.add_element("S", 0.329075, "wo")
     mat_list.append(mat)
 
-    return {m.id: m for m in mat_list}
+    ### Apply TSL tables for each library ###
 
-test = get_pnnl_mats()
+    # From OpenMC ENDF/B-VIII.1
+    if xs_lib == "endfb81":
+    # c_Al27.h5 ~
+    # c_Al_in_Al2O3.h5          7
+        mat_list[6].add_s_alpha_beta("c_Al_in_Al2O3")
+    # c_Be_distinct.h5          ~
+    # c_Be.h5                   25
+        mat_list[24].add_s_alpha_beta("c_Be")
+    # c_Be_in_Be2C.h5           26
+        mat_list[25].add_s_alpha_beta("c_Be_in_Be2C")
+    # c_Be_in_BeF2.h5           ~
+    # c_Be_in_BeO.h5            27
+        mat_list[26].add_s_alpha_beta("c_Be_in_BeO")
+    # c_Be_in_FLiBe.h5          ~
+    # c_C6H6.h5                 24
+        mat_list[23].add_s_alpha_beta("c_C6H6")
+    # c_Ca_in_CaH2.h5           ~
+    # c_C_in_Be2C.h5            26
+        mat_list[25].add_s_alpha_beta("c_C_in_Be2C")
+    # c_C_in_C5O2H8.h5          201
+        mat_list[200].add_s_alpha_beta("c_C_in_C5O2H8")
+    # c_C_in_C8H8.h5            278
+        mat_list[277].add_s_alpha_beta("c_C_in_C8H8")
+    # c_C_in_CF2.h5             138,139
+        mat_list[137].add_s_alpha_beta("c_C_in_CF2")
+        mat_list[138].add_s_alpha_beta("c_C_in_CF2")
+    # c_C_in_SiC.h5             312
+        mat_list[311].add_s_alpha_beta("c_C_in_SiC")
+    # c_C_in_UC_100p.h5         ~
+    # c_C_in_UC_10p.h5          ~ 
+    # c_C_in_UC_5p.h5           370
+        mat_list[369].add_s_alpha_beta("c_C_in_UC_5p")
+    # c_C_in_UC.h5              ~
+    # c_C_in_UC_HALEU.h5        ~
+    # c_C_in_UC_HEU.h5          ~
+    # c_C_in_ZrC.h5             ~
+    # c_D_in_7LiD.h5            ~
+    # c_D_in_D2O.h5             391
+        mat_list[390].add_s_alpha_beta("c_D_in_D2O")
+    # c_Fe56.h5                 ~
+    # c_F_in_Be2.h5             ~
+    # c_F_in_CF2.h5             138,139
+        mat_list[137].add_s_alpha_beta("c_F_in_CF2")
+        mat_list[138].add_s_alpha_beta("c_F_in_CF2")
+    # c_F_in_FLiBe.h5           ~
+    # c_F_in_HF.h5              ~
+    # c_F_in_MgF2.h5            ~
+    # c_Graphite_10p.h5         ~
+    # c_Graphite_20p.h5         ~
+    # c_Graphite_30p.h5         ~
+    # c_Graphite_distinct.h5    ~
+    # c_Graphite.h5             69
+        mat_list[68].add_s_alpha_beta("c_Graphite")
+    # c_H1_in_CaH2.h5           ~
+    # c_H2_in_CaH2.h5           ~
+    # c_H_in_7LiH.h5            196
+        mat_list[195].add_s_alpha_beta("c_H_in_7LiH")
+    # c_H_in_C5O2H8.h5          201
+        mat_list[200].add_s_alpha_beta("c_H_in_C5O2H8")
+    # c_H_in_C8H8.h5            278
+        mat_list[277].add_s_alpha_beta("c_H_in_C8H8")
+    # c_H_in_CH2.h5             ~
+    # c_H_in_CH4_liquid.h5      215
+        mat_list[214].add_s_alpha_beta("c_H_in_CH4_liquid")
+    # c_H_in_CH4_solid.h5       ~
+    # c_H_in_H2O.h5             392
+        mat_list[391].add_s_alpha_beta("c_H_in_H2O")
+    # c_H_in_H2O_solid.h5       ~
+    # c_H_in_HF.h5              ~
+    # c_H_in_ParaffinicOil.h5   ~
+    # c_H_in_UH3.h5             374
+        mat_list[373].add_s_alpha_beta("c_H_in_UH3")
+    # c_H_in_YH2.h5             ~
+    # c_H_in_ZrH2.h5            409
+        mat_list[408].add_s_alpha_beta("c_H_in_ZrH2")
+    # c_H_in_ZrH.h5             ~
+    # c_H_in_ZrHx.h5            408
+        mat_list[407].add_s_alpha_beta("c_H_in_ZrHx")
+    # c_Li_in_7LiD.h5           ~
+    # c_Li_in_7LiH.h5           196
+        mat_list[195].add_s_alpha_beta("c_Li_in_7LiH")
+    # c_Li_in_FLiBe.h5          ~
+    # c_Mg_in_MgF2.h5           ~
+    # c_Mg_in_MgO.h5            208
+        mat_list[207].add_s_alpha_beta("c_Mg_in_MgO")
+    # c_N_in_UN_100p.h5         ~
+    # c_N_in_UN_10p.h5          ~
+    # c_N_in_UN_5p.h5           375
+        mat_list[374].add_s_alpha_beta("c_N_in_UN_5p")
+    # c_N_in_UN.h5              ~
+    # c_N_in_UN_HALEU.h5        ~
+    # c_N_in_UN_HEU.h5          ~
+    # c_O_in_Al2O3.h5           7
+        mat_list[6].add_s_alpha_beta("c_O_in_Al2O3")
+    # c_O_in_BeO.h5             27
+        mat_list[26].add_s_alpha_beta("c_O_in_BeO")
+    # c_O_in_C5O2H8.h5          201
+        mat_list[200].add_s_alpha_beta("c_O_in_C5O2H8")
+    # c_O_in_D2O.h5             391
+        mat_list[390].add_s_alpha_beta("c_O_in_D2O")
+    # c_O_in_H2O_solid.h5       ~
+    # c_O_in_MgO.h5             208
+        mat_list[207].add_s_alpha_beta("c_O_in_MgO")
+    # c_O_in_PuO2.h5            256
+        mat_list[255].add_s_alpha_beta("c_O_in_PuO2")
+    # c_O_in_SiO2_alpha.h5      313
+        mat_list[312].add_s_alpha_beta("c_O_in_SiO2_alpha")
+    # c_O_in_UO2_100p.h5        ~
+    # c_O_in_UO2_10p.h5         ~
+    # c_O_in_UO2_5p.h5          372
+        mat_list[371].add_s_alpha_beta("c_O_in_UO2_5p")
+    # c_O_in_UO2.h5             ~
+    # c_O_in_UO2_HALEU.h5       ~
+    # c_O_in_UO2_HEU.h5         ~
+    # c_ortho_D.h5              ~
+    # c_ortho_H.h5              ~
+    # c_para_D.h5               ~
+    # c_para_H.h5               ~
+    # c_Pu_in_PuO2.h5           256
+        mat_list[255].add_s_alpha_beta("c_Pu_in_PuO2")
+    # c_Si_in_SiC.h5            312
+        mat_list[311].add_s_alpha_beta("c_Si_in_SiC")
+    # c_Si_in_SiO2_alpha.h5     313
+        mat_list[312].add_s_alpha_beta("c_Si_in_SiO2_alpha")
+    # c_SiO2_beta.h5            ~
+    # c_U_in_UC_100p.h5         ~
+    # c_U_in_UC_10p.h5          ~
+    # c_U_in_UC_5p.h5           370
+        mat_list[369].add_s_alpha_beta("c_U_in_UC_5p")
+    # c_U_in_UC.h5              ~
+    # c_U_in_UC_HALEU.h5        ~
+    # c_U_in_UC_HEU.h5          ~
+    # c_U_in_UN_100p.h5         ~
+    # c_U_in_UN_10p.h5          ~
+    # c_U_in_UN_5p.h5           375
+        mat_list[374].add_s_alpha_beta("c_U_in_UN_5p")
+    # c_U_in_UN.h5              ~
+    # c_U_in_UN_HALEU.h5        ~
+    # c_U_in_UN_HEU.h5          ~
+    # c_U_in_UO2.h5             372
+        mat_list[371].add_s_alpha_beta("c_U_in_UO2")
+    # c_U_in_UO2_HALEU.h5       ~
+    # c_U_in_UO2_HEU.h5         ~
+    # c_U_metal_100p.h5         ~
+    # c_U_metal_10p.h5          ~
+    # c_U_metal_5p.h5           380,384
+        mat_list[379].add_s_alpha_beta("c_U_metal_5p")
+        mat_list[383].add_s_alpha_beta("c_U_metal_5p")
+    # c_U_metal.h5              385
+        mat_list[384].add_s_alpha_beta("c_U_metal")
+    # c_U_metal_HALEU.h5        ~
+    # c_U_metal_HEU.h5          381,382,383
+        mat_list[380].add_s_alpha_beta("c_U_metal_HEU")
+        mat_list[381].add_s_alpha_beta("c_U_metal_HEU")
+        mat_list[382].add_s_alpha_beta("c_U_metal_HEU")
+    # c_Y_in_YH2.h5             ~
+    # c_Zr_in_ZrC.h5            ~
+    # c_Zr_in_ZrH2.h5           409
+        mat_list[408].add_s_alpha_beta("c_Zr_in_ZrH2")
+    # c_Zr_in_ZrH.h5            ~
+    # c_Zr_in_ZrHx.h5           408
+        mat_list[407].add_s_alpha_beta("c_Zr_in_ZrHx")
+
+
+    return {m.id: m for m in mat_list}
